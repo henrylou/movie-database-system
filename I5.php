@@ -9,18 +9,18 @@
 
 <body background="./home.jpg">
 <table align="center" cellpadding="10px">
-	<tr>
-		<td><a href="I1.php">Add New Actor or Director</a></td>
-		<td><a href="I2.php">Add New Movie</a></td>
-		<td><a href="I3.php">Add New Movie Review</a></td>
-		<td><a href="I4.php">Add New Actor to Movie</a></td>
-	</tr>
-	<tr>
-		<td><a href="I5.php">Add New Director to Movie</a></td>
-		<td><a href="B1.php">Show Actor Information</a></td>
-		<td><a href="B2.php">Show Movie Information</a></td>
-		<td><a href="S1.php">Search</a></td>
-	</tr>
+<tr>
+	<td><a href="I1.php">Add New Actor or Director</a></td>
+	<td><a href="I2.php">Add New Movie</a></td>
+	<td><a href="I3.php">Add New Movie Review</a></td>
+	<td><a href="I4.php">Add New Actor to Movie</a></td>
+</tr>
+<tr>
+	<td><a href="I5.php">Add New Director to Movie</a></td>
+	<td><a href="B1.php">Show Actor Information</a></td>
+	<td><a href="B2.php">Show Movie Information</a></td>
+	<td><a href="S1.php">Search</a></td>
+</tr>
 </table>
 <form method="GET" action="<?php echo $_SERVER['PHP_SELF'];?>">
 <table align="center" cellpadding="10px">

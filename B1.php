@@ -3,36 +3,36 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <font color="black" face="Palatino">
 <head>
-	<title>Actor Information</title>
+    <title>Actor Information</title>
 	<h1 align="center">Actor Information</h1>
 </head>
 
 <body background="./search.jpg">
-	<table align="center" cellpadding="10px">
-		<tr>
-			<td><a href="I1.php">Add New Actor or Director</a></td>
-			<td><a href="I2.php">Add New Movie</a></td>
-			<td><a href="I3.php">Add New Movie Review</a></td>
-			<td><a href="I4.php">Add New Actor to Movie</a></td>
-		</tr>
-		<tr>
-			<td><a href="I5.php">Add New Director to Movie</a></td>
-			<td><a href="B1.php">Show Actor Information</a></td>
-			<td><a href="B2.php">Show Movie Information</a></td>
-			<td><a href="S1.php">Search</a></td>
-		</tr>
-	</table>
+    <table align="center" cellpadding="10px">
+	<tr>
+        <td><a href="I1.php">Add New Actor or Director</a></td>
+		<td><a href="I2.php">Add New Movie</a></td>
+		<td><a href="I3.php">Add New Movie Review</a></td>			
+        <td><a href="I4.php">Add New Actor to Movie</a></td>
+	</tr>
+	<tr>
+		<td><a href="I5.php">Add New Director to Movie</a></td>
+		<td><a href="B1.php">Show Actor Information</a></td>
+		<td><a href="B2.php">Show Movie Information</a></td>
+		<td><a href="S1.php">Search</a></td>
+	</tr>
+</table>
 <?php
-$db = mysqli_connect('localhost', 'cs143', '', 'CS143'); // TEST-->CS143 / submission
+$db = mysqli_connect('localhost', 'cs143', '', 'CS143'); 
 if($db->connect_errno > 0) die('Unable to connect to database [' . $db->connect_error . ']');
 $db_id = trim($_GET["id"]);
 if ($db_id == "") echo '<p align="center">Please input your keywords below</p>';
 else {
-	// echo "<h2>Actor Information: </h2>";
-	echo '<table align="center" cellpadding="1px">';
-	$rs_actor = $db->query("SELECT last, first, sex, dob, dod FROM Actor WHERE id = $db_id;") or die(mysql_error());
-	$arr = mysqli_fetch_array($rs_actor);
-	$last = $arr["last"];
+    // echo "<h2>Actor Information: </h2>";
+    echo '<table align="center" cellpadding="1px">';
+    $rs_actor = $db->query("SELECT last, first, sex, dob, dod FROM Actor WHERE id = $db_id;") or die(mysql_error());
+    $arr = mysqli_fetch_array($rs_actor);
+    $last = $arr["last"];
 	$first = $arr["first"];
 	$sex = $arr["sex"];
 	$dob = $arr["dob"];
